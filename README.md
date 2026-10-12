@@ -47,3 +47,34 @@ Design and implement a Food Delivery Service system that allows customers to pla
 - **Fields:** int id, String name, boolean available, List<Order> assignedOrders
 
 ---
+
+## Example Usage
+
+```java
+FoodDeliveryService service = new FoodDeliveryService();
+Customer alice = new Customer(1, "Alice");
+Restaurant pizzaPlace = new Restaurant(1, "Pizza Place");
+MenuItem pizza = new MenuItem(1, "Margherita Pizza", 10.0);
+
+service.registerCustomer(alice);
+service.addRestaurant(pizzaPlace);
+service.addMenuItem(pizzaPlace, pizza);
+
+service.placeOrder(alice, pizzaPlace, List.of(pizza));
+```
+
+---
+
+## Demo
+
+See `fooddeliveryservice.FoodDeliveryServiceDemo` for a sample usage and simulation of the food delivery service.
+
+---
+
+## Extending the Framework
+
+- **Add ratings and reviews:** Allow customers to rate restaurants and delivery agents.
+- **Add payment integration:** Support online payments.
+- **Add order cancellation or modification:** Allow customers to cancel or modify orders before delivery.
+
+---

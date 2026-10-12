@@ -1,3 +1,5 @@
+package fooddeliveryservice;
+
 public class FoodDeliveryServiceDemo {
     public static void main(String[] args) {
         System.out.println("Food Delivery Service Demo");
