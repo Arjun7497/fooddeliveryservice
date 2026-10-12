@@ -18,3 +18,32 @@ Design and implement a Food Delivery Service system that allows customers to pla
 - **Extensibility:** Easy to add new features such as ratings, reviews, or payment integration.
 
 ---
+## Core Entities
+
+- **FoodDeliveryService:** Main class that manages customers, restaurants, orders, and delivery agents.
+- **Customer:** Represents a customer who can place orders.
+- **Restaurant:** Represents a restaurantManagementSystem with a menu of items.
+- **MenuItem:** Represents an item on a restaurantManagementSystem's menu.
+- **Order:** Represents a customer's order, including items, status, and assigned delivery agent.
+- **DeliveryAgent:** Represents a delivery agent who delivers orders.
+
+### 1. FoodDeliveryService
+- **Fields:** List<Customer> customers, List<Restaurant> restaurants, List<DeliveryAgent> agents, List<Order> orders
+- **Methods:** registerCustomer(Customer), addRestaurant(Restaurant), addMenuItem(Restaurant, MenuItem), placeOrder(Customer, Restaurant, List<MenuItem>), assignDeliveryAgent(Order), updateOrderStatus(Order, Status), etc.
+
+### 2. Customer
+- **Fields:** int id, String name, List<Order> orders
+
+### 3. Restaurant
+- **Fields:** int id, String name, List<MenuItem> menu
+
+### 4. MenuItem
+- **Fields:** int id, String name, double price
+
+### 5. Order
+- **Fields:** int id, Customer customer, Restaurant restaurantManagementSystem, List<MenuItem> items, OrderStatus status, DeliveryAgent agent
+
+### 6. DeliveryAgent
+- **Fields:** int id, String name, boolean available, List<Order> assignedOrders
+
+---
