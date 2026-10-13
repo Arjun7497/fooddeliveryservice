@@ -27,6 +27,8 @@ Design and implement a Food Delivery Service system that allows customers to pla
 - **Order:** Represents a customer's order, including items, status, and assigned delivery agent.
 - **DeliveryAgent:** Represents a delivery agent who delivers orders.
 
+## Class or UML Diagram
+
 ### 1. FoodDeliveryService
 - **Fields:** List<Customer> customers, List<Restaurant> restaurants, List<DeliveryAgent> agents, List<Order> orders
 - **Methods:** registerCustomer(Customer), addRestaurant(Restaurant), addMenuItem(Restaurant, MenuItem), placeOrder(Customer, Restaurant, List<MenuItem>), assignDeliveryAgent(Order), updateOrderStatus(Order, Status), etc.
